@@ -3,6 +3,19 @@
 
 module.exports = function(environment) {
   let ENV = {
+		contentSecurityPolicy: {
+		'script-src': "'self' 'unsafe-eval' apis.google.com",
+		'frame-src': "'self' https://*.firebaseapp.com",
+		'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+	},
+	firebase: {
+		apiKey: "AIzaSyADBmFu2CGhN_Kd_876hNOjf3fsOyvnmeQ",
+    authDomain: "ginbox-c39fd.firebaseapp.com",
+    databaseURL: "https://ginbox-c39fd.firebaseio.com",
+    projectId: "ginbox-c39fd",
+    storageBucket: "ginbox-c39fd.appspot.com",
+    messagingSenderId: "836601102141"
+	},
     modulePrefix: 'g-inbox',
     environment,
     rootURL: '/',
