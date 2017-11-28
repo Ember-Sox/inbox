@@ -8,7 +8,6 @@ export default Controller.extend({
       let read = this.get('read')
       let starred = this.get('starred')
       let labels = this.get('labels')
-      alert(subject)
 
       var newMessage = this.store.createRecord('message', {
         subject: subject,
