@@ -4,11 +4,11 @@
       <span class="badge badge">2</span>
       unread messages
     </p>
+    {{#link-to 'new'}}
     <a class="btn btn-danger">
-      {{#link-to 'new'}}
       <i class="fa fa-plus"></i>
-      {{/link-to}}
     </a>
+    {{/link-to}}
     <button class="btn btn-default" {{action 'checkAll'}}>
       <i class="fa fa-minus-square-o"></i>
     </button>
