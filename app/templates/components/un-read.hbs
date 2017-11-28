@@ -1,0 +1,25 @@
+
+<div class="row message read">
+  <div class="col-xs-1">
+    <div class="row">
+      <div class="col-xs-2">
+        <input type="checkbox"
+           name="checkbox"
+           checked={{isChecked}}
+           {{action "toggleChecked" on="change"}}/>
+      </div>
+      <div class="col-xs-2">
+        <i class="star fa fa-star-o"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-11">
+    <a href="#"{{action "toggleMessage" on="click"}}>
+      Here is some message text that has a bunch of stuff
+    </a>
+    {{#if messageOpen}}
+    <p>This is the message{{blah.message}}</p>
+    {{/if}}
+  </div>
+</div>
