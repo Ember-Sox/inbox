@@ -12,7 +12,6 @@ export default Component.extend({
       this.toggleProperty('isChecked')
     },
     toggleMessage() {
-      this.set('read', true)
       this.toggleProperty('messageOpen')
     }
   }

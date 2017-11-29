@@ -1,11 +1,8 @@
 {{main-header}}
 {{outlet}}
-{{un-read}}
 {{#each model as |message|}}
-{{#if message.unread}}
-{{un-read}}
-{{/if}}
 {{#if message.read}}
-{{un-read}}
+{{is-read id=message.id read=message.read subject=message.subject body=message.body}}
 {{/if}}
+{{un-read id=message.id read=message.read subject=message.subject body=message.body}}
 {{/each}}
