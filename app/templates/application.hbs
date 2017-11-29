@@ -3,6 +3,7 @@
 {{#each model as |message|}}
 {{#if message.read}}
 {{is-read id=message.id read=message.read subject=message.subject body=message.body}}
-{{/if}}
+{{else}}
 {{un-read id=message.id read=message.read subject=message.subject body=message.body}}
+{{/if}}
 {{/each}}

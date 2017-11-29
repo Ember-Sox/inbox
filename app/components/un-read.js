@@ -4,18 +4,23 @@ export default Component.extend({
   actions: {
     checkboxClicked(model) {
       this.get('thisObject').toggleProperty('isChecked')
-			alert('this is running', model)
+			// alert('this is running', model)
 
     },
-    toggleChecked() {
+    toggleChecked(model) {
       this.toggleProperty('isChecked')
 			alert('this is running', model)
 
     },
-    toggleMessage() {
+    toggleMessage(model) {
       this.set('read', true)
-      this.toggleProperty('messageOpen')
+			// $(this).addClass('blork')
 			this.destroy()
-    }
+			// this.save()
+
+
+      // this.toggleProperty('messageOpen')
+			// this.rerender()
+    },
   }
 });
