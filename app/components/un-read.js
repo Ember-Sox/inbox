@@ -12,15 +12,35 @@ export default Component.extend({
 			alert('this is running', model)
 
     },
-    toggleMessage(model) {
-      this.set('read', true)
-			// $(this).addClass('blork')
-			this.destroy()
-			// this.save()
+    toggleMessage() {
 
-
-      // this.toggleProperty('messageOpen')
-			// this.rerender()
+			// alert(this.read)
     },
+		updateMessage: function(id){
+			this.set('read', true)
+			var self = this;
+			var subject = self.subject;
+			var body = self.body;
+			var starred = self.starred;
+			var read = self.read;
+			var labels = self.labels
+			var model = self.model
+			alert(model)
+			// create new messages
+			this.get.store.findRecord('messages', id)
+			.then(function(messages){
+				alert('test')
+				messages.set('subject', subject);
+				messages.set('body', body);
+				messages.set('starred', starred);
+				messages.set('read', read);
+				messages.set('labels', labels)
+
+				messages.save();
+
+			}).catch(function(error){
+				alert(error)
+			});
+		}
   }
 });
