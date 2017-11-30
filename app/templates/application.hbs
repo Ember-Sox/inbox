@@ -2,8 +2,8 @@
 {{outlet}}
 {{#each model as |message|}}
 {{#if message.read}}
-{{is-read model=model id=message.id read=message.read subject=message.subject body=message.body}}
+{{is-read message=message}}
 {{else}}
-{{un-read model=model id=message.id read=message.read subject=message.subject body=message.body}}
+{{un-read message=message}}
 {{/if}}
 {{/each}}
