@@ -17,8 +17,8 @@
     <a href="#"{{action "toggleMessage" on="click"}}>
       {{subject}}
     </a>
-    {{#if messageOpen}}
+    {{#unless messageOpen}}
     <p>{{body}}</p>
-    {{/if}}
+    {{/unless}}
   </div>
 </div>
